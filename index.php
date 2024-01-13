@@ -19,13 +19,15 @@ require_once("config.php");
 
 //echo $usuario;
 
-$aluno = new Usuario();
+//$aluno = new Usuario();
 
-$aluno->setDeslogin("aluno");
-$aluno->setDessenha("@lun0");
+//$aluno->setDeslogin("aluno");
+//$aluno->setDessenha("@lun0");
+//$aluno->insert();
+//echo $aluno;
 
-$aluno->insert();
-
-echo $aluno;
-
+$usuario = new Usuario();
+$usuario->loadById(7);
+$usuario->update("professor", "!@#$%");
+echo $usuario
  ?>
