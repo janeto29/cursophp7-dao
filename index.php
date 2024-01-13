@@ -14,8 +14,18 @@ require_once("config.php");
 
 //echo json_decode($search);
 
-$usuario = new Usuario();
-$usuario->login("root", "!@#$%%");
+//$usuario = new Usuario();
+//$usuario->login("root", "!@#$%%");
 
-echo $usuario;
+//echo $usuario;
+
+$aluno = new Usuario();
+
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@lun0");
+
+$aluno->insert();
+
+echo $aluno;
+
  ?>

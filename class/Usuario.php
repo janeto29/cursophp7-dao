@@ -106,7 +106,7 @@ class Usuario {
 	public function insert(){
 
 		$sql = new Sql();
-
+								//para MySqlServer troca o CALL por EXECUTE
 		$results = $sql->select("CALL sp_usuarios_insert(:LOGIN, :PASSWORD)", array(
 			':LOGIN'=>$this->getDeslogin(),
 			':PASSWORD'=>$this->getDessenha()
